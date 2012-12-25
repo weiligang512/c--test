@@ -1,51 +1,33 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <bitset>
 
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+using std::vector;
+using std::bitset;
 
 
 int main()
 {
-	string st1("weiw");
-	string st2("weiligang");
-	string st3;
-	string::size_type si;
+	int word;
+	vector<int> ivec1(10);
+	bitset<32> bitvec(0xff);
+
+	cout << bitvec[10] << endl;
+
+	cout << ivec1.size() << endl;	
 	
-	//std::cin >> st1;
-	//cout << a << "\n" << b << endli;
-	if (st1.empty() == true)
+	for (vector<int>::iterator ix = ivec1.begin(); ix != ivec1.end(); ix++)
 	{
-		cout << "st1 is empty\n";	
+		*ix = 1;
+		cout << *ix << endl;	
 	}
-
-	if (st1 == st2)
-	{
-		cout << "st1 == st2\n";
-	}
-	else if (st1 > st2)
-	{
-		cout << "st1 > st2\n";
-	}
-	else
-	{
-		cout << "st1 < st2\n";	
-	}
-
-	st3 = st2 + "1";
-	cout << st3 << endl;
-	st3 = "1" + st1;
-	cout << st3 << endl;
-	st3 = st1 + "3" + "4";
-	cout << st3 << endl;
-	st3 = "5" + st1 + "6";	
-	cout << st3 << endl;
-	cout << st1 << endl;
-	cout << st2 << endl;
-	cout << st3 << endl;
+	cout << ivec1.size() << endl;	
 
 	return 0;
 }
